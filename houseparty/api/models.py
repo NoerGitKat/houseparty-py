@@ -11,7 +11,7 @@ def generate_unique_code():
             break
     return roomcode
 
-    # Create your models here.
+# Create your models here.
 
 
 class Room(models.Model):
