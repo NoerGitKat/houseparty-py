@@ -1,10 +1,9 @@
 const path = require('path');
-const { mainModule } = require('process');
 const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.tsx',
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, './static/ui'),
     filename: '[name].js',
@@ -36,6 +35,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+  },
+  devServer: {
+    hot: true,
   },
   optimization: {
     minimize: true,

@@ -1,7 +1,17 @@
-import * as React from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Homepage from '../pages';
+import RoomJoinPage from '../pages/room-join';
 
 const App: React.FC<{}> = () => {
-  return <h1>Testing my frontend!</h1>;
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route exact path="/join" component={RoomJoinPage} />
+      </Switch>
+    </Router>
+  );
 };
 
 export default App;
